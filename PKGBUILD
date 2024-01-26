@@ -1,12 +1,12 @@
 pkgname=dwm-flexipatch
 pkgver=6.4
-pkgrel=56
+pkgrel=57
 pkgdesc="A dynamic window manager for X"
 url="http://dwm.suckless.org"
 arch=('i686' 'x86_64')
 license=('MIT')
 options=(zipman)
-depends=('libx11' 'libxinerama')
+depends=('libx11' 'libxinerama' 'imlib2')
 conflicts=('dwm')
 provides=('dwm')
 makedepends=('git' 'libxft')
