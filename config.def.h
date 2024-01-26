@@ -403,7 +403,20 @@ static const char *layoutmenu_cmd = "layoutmenu.sh";
 #if COOL_AUTOSTART_PATCH
 static const char *const autostart[] = {
     "xsetroot", "-solid", "#4C566A", NULL,
-    "systemctl", "--user", "restart", "autostart.target", "autostart.dwm.target", NULL,
+    "xsetroot", "-cursor_name", "left_ptr", NULL,
+    "/usr/lib/xfce-polkit/xfce-polkit", NULL,
+    "xiccd", NULL,
+    "sh", "-c", "xrdb merge $HOME/.Xresources", NULL,
+    "sh", "-c", "xsettingsd -c $HOME/.config/xsettingsd/xsettingsd.conf", NULL,
+    "sh", "-c", "$HOME/.local/bin/gtk-theme-setter --gtk 'Nordic-darker'", NULL,
+    "sh", "-c", "$HOME/.local/bin/gtk-theme-setter --icon 'Nordzy-dark'", NULL,
+    "sh", "-c", "$HOME/.local/bin/gtk-theme-setter --font 'Fira Sans 9'", NULL,
+    "sh", "-c", "$HOME/.local/bin/gtk-theme-setter --cursor 'macOS-Monterey'", NULL,
+    "sh", "-c", "picom --config $HOME/.config/picom/picom.conf", NULL,
+    "sh", "-c", "$HOME/.local/bin/wallpaper-rotator", NULL,
+    "sh", "-c", "dunst -config $HOME/.config/dunst/dunstrc", NULL,
+    "sh", "-c", "xss-lock -s ${XDG_SESSION_ID} -l -- slock", NULL,
+    "sh", "-c", "redshift", NULL,
     "dwmblocks", NULL,
 	NULL /* terminate */
 };
@@ -1022,8 +1035,8 @@ static const Key keys[] = {
     { 0,                             	XF86XK_MonBrightnessUp,         spawn,  {.v = brightnessUp } },
     { 0,                             	XF86XK_MonBrightnessDown,       spawn,  {.v = brightnessDown } },
 
-    { ALTKEY,                           XK_F12,                         spawn,  SHCMD("/usr/bin/systemctl --user restart wallpaper.service") },
-    { ALTKEY|SHIFTKEY,                  XK_equal,                       spawn,  SHCMD("/usr/bin/systemctl --user restart wallpaper.service") },
+    { ALTKEY,                           XK_F12,                         spawn,  SHCMD("$HOME/.local/bin/wallpaper-rotator") },
+    { ALTKEY|SHIFTKEY,                  XK_equal,                       spawn,  SHCMD("$HOME/.local/bin/wallpaper-rotator") },
 
     { MODKEY,                           XK_F1,      spawn,              SHCMD("firefox") },
     { ALTKEY|SHIFTKEY,                  XK_1,       spawn,              SHCMD("firefox") },
