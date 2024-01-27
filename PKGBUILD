@@ -1,6 +1,6 @@
 pkgname=dwm-flexipatch
 pkgver=6.4
-pkgrel=57
+pkgrel=58
 pkgdesc="A dynamic window manager for X"
 url="http://dwm.suckless.org"
 arch=('i686' 'x86_64')

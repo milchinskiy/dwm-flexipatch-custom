@@ -418,6 +418,7 @@ static const char *const autostart[] = {
     "sh", "-c", "xss-lock -s ${XDG_SESSION_ID} -l -- slock", NULL,
     "sh", "-c", "redshift", NULL,
     "dwmblocks", NULL,
+    "sh", "-c", "$HOME/.config/dwm/autostart.sh", NULL,
 	NULL /* terminate */
 };
 #endif // COOL_AUTOSTART_PATCH
