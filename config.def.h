@@ -405,6 +405,7 @@ static const char *const autostart[] = {
     "xsetroot", "-solid", "#4C566A", NULL,
     "xsetroot", "-cursor_name", "left_ptr", NULL,
     "/usr/lib/xfce-polkit/xfce-polkit", NULL,
+    "/usr/bin/gnome-keyring-daemon", "-r", "-d", "--components=pkcs11,secrets,ssh,gnupg", NULL,
     "xiccd", NULL,
     "sh", "-c", "xrdb merge $HOME/.Xresources", NULL,
     "sh", "-c", "xsettingsd -c $HOME/.config/xsettingsd/xsettingsd.conf", NULL,
