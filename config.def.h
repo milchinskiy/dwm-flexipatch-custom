@@ -983,7 +983,7 @@ static const char *dmenucmd[]       = { "dmenu_run", NULL };
 static const char *fileManager[]    = { "thunar", NULL };
 static const char *screenshoter[]   = { "flameshot", "gui", NULL };
 static const char *screenshotLauncher[]   = { "flameshot", "launcher", NULL };
-static const char *powermenu[]      = { "dmenu_powermenu", NULL };
+static const char *powermenu[]      = { "powermenu", NULL };
 static const char *vm_menu[]        = { "mk-virt-machine", NULL };
 
 // static const char *playerPlayTgl[]  = { "playerctl", "play-pause", NULL };
