@@ -416,9 +416,9 @@ static const char *const autostart[] = {
     "sh", "-c", "picom --config $HOME/.config/picom/picom.conf", NULL,
     "sh", "-c", "$HOME/.local/bin/wallpaper-rotator", NULL,
     "sh", "-c", "dunst -config $HOME/.config/dunst/dunstrc", NULL,
-    "sh", "-c", "xss-lock -s ${XDG_SESSION_ID} -l -- slock", NULL,
+    // "sh", "-c", "xss-lock -s ${XDG_SESSION_ID} -l -- slock", NULL,
     "sh", "-c", "redshift", NULL,
-    "dwmblocks", NULL,
+    "atomblocks", "run", NULL,
     "sh", "-c", "$HOME/.config/dwm/autostart.sh", NULL,
 	NULL /* terminate */
 };
@@ -1008,7 +1008,7 @@ static const Key keys[] = {
     { CONTROLKEY|ALTKEY,                XK_space,   					spawn,	{.v = dmenucmd } },
     { MODKEY|SHIFTKEY,                  XK_Return,  					spawn,  {.v = fileManager } },
     { MODKEY,                           XK_Return,  			        spawn,  {.v = termcmd } },
-    { MODKEY,                           XK_space,                       spawn,  SHCMD("sleep 0.05 && pkill -RTMIN+19 dwmblocks") },
+    { MODKEY,                           XK_space,                       spawn,  SHCMD("sleep 0.05 && atomblocks hit 0") },
     { MODKEY,                           XK_BackSpace,  	        		spawn,  {.v = powermenu } },
     { MODKEY|ALTKEY|CONTROLKEY,         XK_p,  	        		        spawn,  {.v = dmenuProjectSelector } },
     { MODKEY|ALTKEY|CONTROLKEY,         XK_k,  	        		        spawn,  {.v = dmenuProcessKiller } },
@@ -1050,8 +1050,10 @@ static const Key keys[] = {
     { ALTKEY|SHIFTKEY,                  XK_7,       spawn,              SHCMD("steam-runtime") },
     { MODKEY,                           XK_F8,      spawn,              SHCMD("virtualbox") },
     { ALTKEY|SHIFTKEY,                  XK_8,       spawn,              SHCMD("virtualbox") },
-    { MODKEY,                           XK_F11,     spawn,              SHCMD("loginctl lock-session $XDG_SESSION_ID") },
-    { ALTKEY|SHIFTKEY,                  XK_l,       spawn,              SHCMD("loginctl lock-session $XDG_SESSION_ID") },
+    // { MODKEY,                           XK_F11,     spawn,              SHCMD("loginctl lock-session $XDG_SESSION_ID") },
+    // { ALTKEY|SHIFTKEY,                  XK_l,       spawn,              SHCMD("loginctl lock-session $XDG_SESSION_ID") },
+    { MODKEY,                           XK_F11,     spawn,              SHCMD("slock") },
+    { ALTKEY|SHIFTKEY,                  XK_l,       spawn,              SHCMD("slock") },
     { MODKEY,                           XK_F12,     spawn,              SHCMD("galculator") },
 
     /* modifier                     key            function                argument */
