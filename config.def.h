@@ -176,7 +176,7 @@ static char normfloatcolor[]             = "#2e3440";
 
 static char selfgcolor[]                 = "#e5e9f0";
 static char selbgcolor[]                 = "#2e3440";
-static char selbordercolor[]             = "#4C566A";
+static char selbordercolor[]             = "#81A1C1";
 static char selfloatcolor[]              = "#4C566A";
 
 static char titlenormfgcolor[]           = "#e5e9f0";

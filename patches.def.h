@@ -550,7 +550,7 @@
  * then all processes from autostart array will be killed.
  * https://dwm.suckless.org/patches/cool_autostart/
  */
-#define COOL_AUTOSTART_PATCH 1
+#define COOL_AUTOSTART_PATCH 0
 
 /* The cyclelayouts patch lets you cycle through all your layouts.
  * https://dwm.suckless.org/patches/cyclelayouts/
@@ -844,7 +844,7 @@
 /* Removes the border when there is only one window visible.
  * https://dwm.suckless.org/patches/noborder/
  */
-#define NOBORDER_PATCH 0
+#define NOBORDER_PATCH 1
 
 /* Enable modifying or removing dmenu in config.def.h which resulted previously in a
  * compilation error because two lines of code hardcode dmenu into dwm.
@@ -1350,13 +1350,13 @@
  * https://github.com/bakkeby/patches/blob/master/dwm/dwm-vanitygaps-6.2.diff
  * https://github.com/bakkeby/patches/blob/master/dwm/dwm-cfacts-vanitygaps-6.2.diff
  */
-#define VANITYGAPS_PATCH 1
+#define VANITYGAPS_PATCH 0
 
 /* This patch adds outer gaps for the monocle layout.
  * Most gaps patches tries to avoid gaps on the monocle layout, as it is often used as a
  * fullscreen mode, hence this is enabled separately from the main vanitygaps patch.
  */
-#define VANITYGAPS_MONOCLE_PATCH 1
+#define VANITYGAPS_MONOCLE_PATCH 0
 
 /* By default MOD+Tab will take the user back to the previous tag only. If the user keeps
  * using MOD+Tab then the view will switch back and forth between the current and previous tag.
