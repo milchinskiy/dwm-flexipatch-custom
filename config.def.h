@@ -520,11 +520,11 @@ static const Rule rules[] = {
 
     // my custom window rules
 	RULE(.class = "firefox", .tags = 1 << 0)
+	RULE(.class = "Chromium", .tags = 1 << 0)
+	RULE(.class = "Google Chrome", .tags = 1 << 0)
+	RULE(.class = "Opera", .tags = 1 << 0)
+	RULE(.class = "Vivaldi", .tags = 1 << 0)
 
-	RULE(.class = "Chromium", .tags = 1 << 1)
-	RULE(.class = "Google Chrome", .tags = 1 << 1)
-	RULE(.class = "Opera", .tags = 1 << 1)
-	RULE(.class = "Vivaldi", .tags = 1 << 1)
 	RULE(.class = "Brave", .tags = 1 << 1)
 
 	RULE(.class = "Code", .role = "browser-window", .tags = 1 << 2)
@@ -1040,10 +1040,10 @@ static const Key keys[] = {
     { ALTKEY,                           XK_F12,                         spawn,  SHCMD("$HOME/.local/bin/wallpaper-rotator") },
     { ALTKEY|SHIFTKEY,                  XK_equal,                       spawn,  SHCMD("$HOME/.local/bin/wallpaper-rotator") },
 
-    { MODKEY,                           XK_F1,      spawn,              SHCMD("firefox") },
-    { ALTKEY|SHIFTKEY,                  XK_1,       spawn,              SHCMD("firefox") },
-    { MODKEY,                           XK_F2,      spawn,              SHCMD("chromium || brave") },
-    { ALTKEY|SHIFTKEY,                  XK_2,       spawn,              SHCMD("chromium || brave") },
+    { MODKEY,                           XK_F1,      spawn,              SHCMD("firefox || chromium") },
+    { ALTKEY|SHIFTKEY,                  XK_1,       spawn,              SHCMD("firefox || chromium") },
+    { MODKEY,                           XK_F2,      spawn,              SHCMD("brave") },
+    { ALTKEY|SHIFTKEY,                  XK_2,       spawn,              SHCMD("brave") },
     { MODKEY,                           XK_F3,      spawn,              SHCMD("code") },
     { ALTKEY|SHIFTKEY,                  XK_3,       spawn,              SHCMD("code") },
     { MODKEY,                           XK_F7,      spawn,              SHCMD("steam-runtime") },
