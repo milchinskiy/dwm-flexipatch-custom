@@ -1052,8 +1052,8 @@ static const Key keys[] = {
     { ALTKEY|SHIFTKEY,                  XK_8,       spawn,              SHCMD("virtualbox") },
     // { MODKEY,                           XK_F11,     spawn,              SHCMD("loginctl lock-session $XDG_SESSION_ID") },
     // { ALTKEY|SHIFTKEY,                  XK_l,       spawn,              SHCMD("loginctl lock-session $XDG_SESSION_ID") },
-    { MODKEY,                           XK_F11,     spawn,              SHCMD("slock") },
-    { ALTKEY|SHIFTKEY,                  XK_l,       spawn,              SHCMD("slock") },
+    { MODKEY,                           XK_F11,     spawn,              SHCMD("screenlock") },
+    { ALTKEY|SHIFTKEY,                  XK_l,       spawn,              SHCMD("screenlock") },
     { MODKEY,                           XK_F12,     spawn,              SHCMD("galculator") },
 
     /* modifier                     key            function                argument */
