@@ -400,29 +400,29 @@ static char *statuscolors[][ColCount] = {
 static const char *layoutmenu_cmd = "layoutmenu.sh";
 #endif
 
-#if COOL_AUTOSTART_PATCH
-static const char *const autostart[] = {
-    "xsetroot", "-solid", "#4C566A", NULL,
-    "xsetroot", "-cursor_name", "left_ptr", NULL,
-    "/usr/lib/xfce-polkit/xfce-polkit", NULL,
-    "/usr/bin/gnome-keyring-daemon", "-r", "-d", "--components=pkcs11,secrets,ssh,gnupg", NULL,
-    "xiccd", NULL,
-    "sh", "-c", "xrdb merge $HOME/.Xresources", NULL,
-    "sh", "-c", "xsettingsd -c $HOME/.config/xsettingsd/xsettingsd.conf", NULL,
-    "sh", "-c", "$HOME/.local/bin/gtk-theme-setter --gtk 'Nordic-darker'", NULL,
-    "sh", "-c", "$HOME/.local/bin/gtk-theme-setter --icon 'Nordzy-dark'", NULL,
-    "sh", "-c", "$HOME/.local/bin/gtk-theme-setter --font 'Fira Sans 9'", NULL,
-    "sh", "-c", "$HOME/.local/bin/gtk-theme-setter --cursor 'macOS-Monterey'", NULL,
-    "sh", "-c", "picom --config $HOME/.config/picom/picom.conf", NULL,
-    "sh", "-c", "$HOME/.local/bin/wallpaper-rotator", NULL,
-    "sh", "-c", "dunst -config $HOME/.config/dunst/dunstrc", NULL,
-    // "sh", "-c", "xss-lock -s ${XDG_SESSION_ID} -l -- slock", NULL,
-    "sh", "-c", "redshift", NULL,
-    "atomblocks", "run", NULL,
-    "sh", "-c", "$HOME/.config/dwm/autostart.sh", NULL,
-	NULL /* terminate */
-};
-#endif // COOL_AUTOSTART_PATCH
+// #if COOL_AUTOSTART_PATCH
+// static const char *const autostart[] = {
+//     "xsetroot", "-solid", "#4C566A", NULL,
+//     "xsetroot", "-cursor_name", "left_ptr", NULL,
+//     "/usr/lib/xfce-polkit/xfce-polkit", NULL,
+//     "/usr/bin/gnome-keyring-daemon", "-r", "-d", "--components=pkcs11,secrets,ssh,gnupg", NULL,
+//     "xiccd", NULL,
+//     "sh", "-c", "xrdb merge $HOME/.Xresources", NULL,
+//     "sh", "-c", "xsettingsd -c $HOME/.config/xsettingsd/xsettingsd.conf", NULL,
+//     "sh", "-c", "$HOME/.local/bin/gtk-theme-setter --gtk 'Nordic-darker'", NULL,
+//     "sh", "-c", "$HOME/.local/bin/gtk-theme-setter --icon 'Nordzy-dark'", NULL,
+//     "sh", "-c", "$HOME/.local/bin/gtk-theme-setter --font 'Fira Sans 9'", NULL,
+//     "sh", "-c", "$HOME/.local/bin/gtk-theme-setter --cursor 'macOS-Monterey'", NULL,
+//     "sh", "-c", "picom --config $HOME/.config/picom/picom.conf", NULL,
+//     "sh", "-c", "$HOME/.local/bin/wallpaper-rotator", NULL,
+//     "sh", "-c", "dunst -config $HOME/.config/dunst/dunstrc", NULL,
+//     // "sh", "-c", "xss-lock -s ${XDG_SESSION_ID} -l -- slock", NULL,
+//     "sh", "-c", "redshift", NULL,
+//     "atomblocks", "run", NULL,
+//     "sh", "-c", "$HOME/.config/dwm/autostart.sh", NULL,
+// 	NULL /* terminate */
+// };
+// #endif // COOL_AUTOSTART_PATCH
 
 #if RENAMED_SCRATCHPADS_PATCH
 static const char *scratchpadcmd[] = {"s", "st", "-n", "spterm", NULL};
