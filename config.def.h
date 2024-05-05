@@ -161,11 +161,11 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #endif // MONOCLE_LAYOUT
 #endif // BAR_TABGROUPS_PATCH
 #if BAR_PANGO_PATCH
-static const char font[]                 = "JetBrainsMono NFP-9:weight=medium:antialias=true:autohint=false";
+static const char font[]                 = "JetBrainsMono NFP-9:weight=medium:antialias=true:autohint=true";
 #else
-static const char *fonts[]               = { "JetBrainsMono-9:weight=semibold:antialias=true:autohint=false", "JetBrainsMono NFP-11:antialias=true:autohint=false" };
+static const char *fonts[]               = { "JetBrainsMono-9:weight=semibold:antialias=true:autohint=true", "JetBrainsMono NFP-11:antialias=true:autohint=true", "Noto Sans Mono-9:anitalias=true:autohint=true" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "JetBrainsMono-9:weight=semibold:antialias=true:autohint=false";
+static const char dmenufont[]            = "JetBrainsMono-9:weight=semibold:antialias=true:autohint=true";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
